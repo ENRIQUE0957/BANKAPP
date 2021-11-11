@@ -186,3 +186,38 @@ const currrenciesUnique = new Set(['USD','GPB','USD','EUR','EUR'])
 currrenciesUnique.forEach(function(value,key,map){
   console.log(`${key}: ${value}`)
 })
+ 
+const simpleArray = ['a','b','c','d','e']
+console.log(simpleArray.slice(3))
+console.log(simpleArray)
+console.log(simpleArray.slice(2,4))
+/*creating a shallow copy of an array*/
+console.log(simpleArray.slice())
+console.log([...simpleArray])
+
+//splice
+/*console.log(simpleArray.splice(2))*/
+/*main diffrence betweeen splice and slice is that splice mutates the original array and slice does not not it creaeted a new instace*/
+/*main diffrence bewteen splice and slice too is the second argument that comes with both of these.*/
+/*CONCAT METHOD or spread opertaor both of these do not chnage original array*/
+/*reverse method */
+console.log(simpleArray.join('123'))
+const cryptos = ['ADA','BTC','ETH','SOL']
+for(const alt of cryptos){
+  if(alt != 'ADA'){
+    console.log(`${alt} is not goin to the moon `)
+  }else{
+    console.log(`we going to the moon baby${alt}`)
+  }
+}
+
+/*for EACH loop which requires a function inside the loop to tell it what to do*/
+/*this is also called a higher order-function a fucntion that return a function*/
+
+cryptos.forEach(function(alt){
+  if(alt != 'ADA'){
+    console.log(`${alt} is not goin to the moon `)
+  }else{
+    console.log(`we going to the moon baby${alt}`)
+  }
+})
